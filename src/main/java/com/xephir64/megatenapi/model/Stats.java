@@ -1,9 +1,11 @@
 package com.xephir64.megatenapi.model;
 
 import jakarta.persistence.*;
+import lombok.Getter;
 
 import java.util.Objects;
 
+@Getter
 @Entity
 public class Stats {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,56 +31,28 @@ public class Stats {
     @Column(name = "luck")
     private int luck;
 
-    public int getId() {
-        return id;
-    }
-
     public void setId(int id) {
         this.id = id;
-    }
-
-    public Integer getDemonId() {
-        return demonId;
     }
 
     public void setDemonId(Integer demonId) {
         this.demonId = demonId;
     }
 
-    public int getStrength() {
-        return strength;
-    }
-
     public void setStrength(int strength) {
         this.strength = strength;
-    }
-
-    public int getVitality() {
-        return vitality;
     }
 
     public void setVitality(int vitality) {
         this.vitality = vitality;
     }
 
-    public int getMagic() {
-        return magic;
-    }
-
     public void setMagic(int magic) {
         this.magic = magic;
     }
 
-    public int getAgility() {
-        return agility;
-    }
-
     public void setAgility(int agility) {
         this.agility = agility;
-    }
-
-    public int getLuck() {
-        return luck;
     }
 
     public void setLuck(int luck) {

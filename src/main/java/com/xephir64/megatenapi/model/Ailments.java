@@ -1,9 +1,11 @@
 package com.xephir64.megatenapi.model;
 
 import jakarta.persistence.*;
+import lombok.Getter;
 
 import java.util.Objects;
 
+@Getter
 @Entity
 public class Ailments {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,32 +22,16 @@ public class Ailments {
     @Column(name = "resistance_type")
     private String resistanceType;
 
-    public int getId() {
-        return id;
-    }
-
     public void setId(int id) {
         this.id = id;
-    }
-
-    public Integer getDemonId() {
-        return demonId;
     }
 
     public void setDemonId(Integer demonId) {
         this.demonId = demonId;
     }
 
-    public String getAilmentType() {
-        return ailmentType;
-    }
-
     public void setAilmentType(String ailmentType) {
         this.ailmentType = ailmentType;
-    }
-
-    public String getResistanceType() {
-        return resistanceType;
     }
 
     public void setResistanceType(String resistanceType) {

@@ -1,9 +1,11 @@
 package com.xephir64.megatenapi.model;
 
 import jakarta.persistence.*;
+import lombok.Getter;
 
 import java.util.Objects;
 
+@Getter
 @Entity
 public class Affinities {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,40 +25,20 @@ public class Affinities {
     @Column(name = "inherit")
     private String inherit;
 
-    public int getId() {
-        return id;
-    }
-
     public void setId(int id) {
         this.id = id;
-    }
-
-    public Integer getDemonId() {
-        return demonId;
     }
 
     public void setDemonId(Integer demonId) {
         this.demonId = demonId;
     }
 
-    public String getSkillType() {
-        return skillType;
-    }
-
     public void setSkillType(String skillType) {
         this.skillType = skillType;
     }
 
-    public int getAffinity() {
-        return affinity;
-    }
-
     public void setAffinity(int affinity) {
         this.affinity = affinity;
-    }
-
-    public String getInherit() {
-        return inherit;
     }
 
     public void setInherit(String inherit) {

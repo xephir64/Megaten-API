@@ -8,7 +8,7 @@ import java.util.Objects;
 @Getter
 @Entity
 @Table(name = "demons")
-public class Demons {
+public class Demon {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "id")
@@ -85,8 +85,8 @@ public class Demons {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Demons demons = (Demons) o;
-        return id == demons.id && level == demons.level && hp == demons.hp && mp == demons.mp && Objects.equals(name, demons.name) && Objects.equals(race, demons.race) && Objects.equals(game, demons.game) && Objects.equals(lore, demons.lore) && Objects.equals(moralAlignment, demons.moralAlignment) && Objects.equals(ethicalAlignment, demons.ethicalAlignment);
+        Demon demon = (Demon) o;
+        return id == demon.id && level == demon.level && hp == demon.hp && mp == demon.mp && Objects.equals(name, demon.name) && Objects.equals(race, demon.race) && Objects.equals(game, demon.game) && Objects.equals(lore, demon.lore) && Objects.equals(moralAlignment, demon.moralAlignment) && Objects.equals(ethicalAlignment, demon.ethicalAlignment);
     }
 
     @Override
